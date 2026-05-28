@@ -50,7 +50,8 @@
         .animate-on-scroll { opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
         .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
         @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-        nav.scrolled { background-color: rgba(10, 10, 10, 0.85); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+        nav.scrolled { background-color: rgba(10, 10, 10, 0.85); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 0.5px solid rgba(255,255,255,0.15); }
+        nav { transition: all 0.3s ease; }
         a:visited { color: inherit; }
             .btn-primary, .btn-primary:visited { color: #0a0a0a; }
             .btn-secondary, .btn-secondary:visited { color: #ffffff; }
@@ -415,7 +416,7 @@ I thrive in 0-to-1 environments where ambiguity is high and the need for structu
         document.querySelectorAll('.animate-on-scroll').forEach((element) => { observer.observe(element); });
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) { navbar.classList.add('scrolled', 'border-b', 'border-outline-variant'); }
+            if (window.scrollY > 100) { navbar.classList.add('scrolled', 'border-b', 'border-outline-variant'); }
             else { navbar.classList.remove('scrolled', 'border-b', 'border-outline-variant'); }
         });
     </script>
