@@ -36,12 +36,12 @@
         .list-item-card:hover { border-color: #ffffff; }
         .list-item-card .project-number { transition: transform 0.2s ease; }
         .list-item-card:hover .project-number { transform: scale(1.05); }
-        .btn-primary { background-color: #ffffff; color: #0a0a0a; border: 0.5px solid #ffffff; transition: background-color 0.15s ease, color 0.15s ease, transform 0.2s ease; }
-        .btn-primary:hover { background-color: #0a0a0a; color: #ffffff; }
-        .btn-secondary { background-color: transparent; color: #ffffff; border: 0.5px solid #ffffff; transition: background-color 0.15s ease, color 0.15s ease, transform 0.2s ease; }
-        .btn-secondary:hover { background-color: #ffffff; color: #0a0a0a; }
-        .btn-outline { background-color: #1a1a1a; color: #ffffff; border: 0.5px solid #ffffff; transition: background-color 0.15s ease, color 0.15s ease; }
-        .btn-outline:hover { background-color: #ffffff; color: #1a1a1a; }
+        .btn-primary { background-color: #ffffff !important; color: #0a0a0a !important; border: 0.5px solid #ffffff; transition: background-color 0.15s ease, color 0.15s ease, transform 0.2s ease; }
+        .btn-primary:hover { background-color: #0a0a0a !important; color: #ffffff !important; }
+        .btn-secondary { background-color: transparent !important; color: #ffffff !important; border: 0.5px solid #ffffff; transition: background-color 0.15s ease, color 0.15s ease, transform 0.2s ease; }
+        .btn-secondary:hover { background-color: #ffffff !important; color: #0a0a0a !important; }
+        .btn-outline { background-color: #1a1a1a !important; color: #ffffff !important; border: 0.5px solid #ffffff; transition: background-color 0.15s ease, color 0.15s ease; }
+        .btn-outline:hover { background-color: #ffffff !important; color: #1a1a1a !important; }
         .hero-bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('logo.png'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0.3; z-index: -1; mask-image: linear-gradient(to bottom, black 0%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%); }
         .animate-on-load { opacity: 0; transform: translateY(20px); animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
         .delay-200 { animation-delay: 200ms; }
@@ -50,12 +50,10 @@
         .animate-on-scroll { opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
         .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
         @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+        nav { transition: background-color 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease; border-bottom: 0.5px solid transparent; }
         nav.scrolled { background-color: rgba(10, 10, 10, 0.85); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 0.5px solid rgba(255,255,255,0.15); }
-        nav { transition: all 0.3s ease; }
+        a { color: inherit; text-decoration: none; }
         a:visited { color: inherit; }
-            .btn-primary, .btn-primary:visited { color: #0a0a0a; }
-            .btn-secondary, .btn-secondary:visited { color: #ffffff; }
-            .btn-outline, .btn-outline:visited { color: #ffffff; }
     </style>
 </head>
 <link rel="icon" type="image/png" href="logo.png">
@@ -64,7 +62,7 @@
 <div class="cursor-crosshair-y" id="cursor-y"></div>
 <div class="grain-overlay"></div>
 <!-- Navigation -->
-<nav class="fixed top-0 w-full z-50 bg-transparent transition-all duration-300" id="navbar">
+<nav class="fixed top-0 w-full z-50 bg-transparent" id="navbar">
 <div class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto md:px-margin-desktop px-margin-mobile">
 <a aria-label="Home" class="cursor-crosshair interactive" href="#">
 <img alt="Brand Logo" class="h-8 w-8 object-contain" src="logo.png">
@@ -87,7 +85,7 @@
                 Final-year Mechatronics Engineer turned Product Builder. 2+ years building AI products from 0-to-1. I spec systems, read code, and ship fast.
             </p>
 <div class="flex flex-col sm:flex-row gap-6 justify-center animate-on-load delay-400">
-<a class="btn-primary font-label-caps text-label-caps uppercase px-8 py-4 cursor-crosshair interactive inline-flex items-center justify-center min-w-[200px]" href="#work" target="_blank" rel="noopener noreferrer">View My Work</a>
+<a class="btn-primary font-label-caps text-label-caps uppercase px-8 py-4 cursor-crosshair interactive inline-flex items-center justify-center min-w-[200px]" href="#work">View My Work</a>
 <a class="btn-secondary font-label-caps text-label-caps uppercase px-8 py-4 cursor-crosshair interactive inline-flex items-center justify-center min-w-[200px]" href="https://drive.google.com/file/d/16jgQokFcyoQs0jwV9XrLYm5bU9MYSZGl/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download Resume</a>
 </div>
 </div>
@@ -97,7 +95,6 @@
 <div class="max-w-container-max mx-auto">
 <h2 class="font-headline-lg text-headline-lg md:font-headline-lg-mobile md:text-headline-lg-mobile text-primary mb-16 uppercase animate-on-scroll is-visible">Work</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-<!-- Project 01 -->
 <article class="brutal-card p-8 md:p-10 flex flex-col justify-between min-h-[300px] interactive cursor-crosshair animate-on-scroll stagger-1 is-visible" style="transition-delay: 100ms;">
 <div>
 <div class="flex justify-between items-start mb-6"><span class="project-number font-label-caps text-label-caps text-on-surface-variant inline-block">01</span></div>
@@ -113,7 +110,6 @@
 <a class="btn-outline font-label-caps text-label-caps px-4 py-2 uppercase tracking-wider" href="https://pm-research-nishant.vercel.app/" target="_blank" rel="noopener noreferrer">Try Now ↗</a>
 <a class="btn-outline font-label-caps text-label-caps px-4 py-2 uppercase tracking-wider" href="https://www.notion.so/PM-Research-Tool-365fe49f568980e79d8fdff4f76653c9" target="_blank" rel="noopener noreferrer">Case Study ↗</a>
 </div></article>
-<!-- Project 02 -->
 <article class="brutal-card p-8 md:p-10 flex flex-col justify-between min-h-[300px] interactive cursor-crosshair animate-on-scroll stagger-2 is-visible" style="transition-delay: 200ms;">
 <div>
 <div class="flex justify-between items-start mb-6"><span class="project-number font-label-caps text-label-caps text-on-surface-variant inline-block">02</span></div>
@@ -128,7 +124,6 @@
 <div class="flex mt-8">
 <a class="btn-outline font-label-caps text-label-caps px-4 py-2 uppercase tracking-wider" href="https://www.notion.so/AI-Driven-Web-Automation-for-SaaS-User-Management-342fe49f568980ee8c49c6ec187d4771" target="_blank" rel="noopener noreferrer">Case Study ↗</a>
 </div></article>
-<!-- Project 03 -->
 <article class="brutal-card p-8 md:p-10 flex flex-col justify-between min-h-[300px] interactive cursor-crosshair animate-on-scroll stagger-1 is-visible" style="transition-delay: 100ms;">
 <div>
 <div class="flex justify-between items-start mb-6"><span class="project-number font-label-caps text-label-caps text-on-surface-variant inline-block">03</span></div>
@@ -143,7 +138,6 @@
 <div class="flex mt-8">
 <a class="btn-outline font-label-caps text-label-caps px-4 py-2 uppercase tracking-wider" href="https://www.notion.so/Automated-Churn-Prevention-System-367fe49f56898011a089c7c9322bb7e6" target="_blank" rel="noopener noreferrer">Case Study ↗</a>
 </div></article>
-<!-- Project 04 -->
 <article class="brutal-card p-8 md:p-10 flex flex-col justify-between min-h-[300px] interactive cursor-crosshair animate-on-scroll stagger-2 is-visible" style="transition-delay: 200ms;">
 <div>
 <div class="flex justify-between items-start mb-6"><span class="project-number font-label-caps text-label-caps text-on-surface-variant inline-block">04</span></div>
@@ -158,7 +152,6 @@
 <div class="flex mt-8">
 <a class="btn-outline font-label-caps text-label-caps px-4 py-2 uppercase tracking-wider" href="https://www.notion.so/Growth-Experiment-Brief-Duolingo-Day-3-Retention-367fe49f5689801f83b4c0b06c4d5995" target="_blank" rel="noopener noreferrer">Case Study ↗</a>
 </div></article>
-<!-- Project 05 -->
 <article class="brutal-card p-8 md:p-10 flex flex-col justify-between min-h-[300px] interactive cursor-crosshair animate-on-scroll stagger-1 is-visible" style="transition-delay: 100ms;">
 <div>
 <div class="flex justify-between items-start mb-6"><span class="project-number font-label-caps text-label-caps text-on-surface-variant inline-block">05</span></div>
@@ -173,7 +166,6 @@
 <div class="flex mt-8">
 <a class="btn-outline font-label-caps text-label-caps px-4 py-2 uppercase tracking-wider" href="https://www.notion.so/Onboarding-Audit-Report-Notion-367fe49f56898072a94bfc5e8a6e93ff" target="_blank" rel="noopener noreferrer">Case Study ↗</a>
 </div></article>
-<!-- Project 06 -->
 <article class="brutal-card p-8 md:p-10 flex flex-col justify-between min-h-[300px] interactive cursor-crosshair animate-on-scroll stagger-2 is-visible" style="transition-delay: 200ms;">
 <div>
 <div class="flex justify-between items-start mb-6"><span class="project-number font-label-caps text-label-caps text-on-surface-variant inline-block">06</span></div>
@@ -191,7 +183,6 @@
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-8 uppercase border-b border-outline-variant pb-4 animate-on-scroll is-visible">More Work</h3>
 <div class="space-y-0 border-t border-outline-variant">
-<!-- Project 07 -->
 <div class="group list-item-card flex flex-col py-6 border-b border-white/10 hover:bg-[#1a1a1a] transition-colors cursor-crosshair interactive px-4 space-y-3 animate-on-scroll stagger-1 is-visible" style="transition-delay: 100ms;">
 <div class="flex items-center gap-4">
 <span class="project-number font-label-caps text-label-caps text-on-surface-variant inline-block">07</span>
@@ -207,7 +198,6 @@
 <a class="text-white font-label-caps text-label-caps uppercase tracking-widest hover:underline whitespace-nowrap" href="https://www.notion.so/Scalable-Data-Collection-Voice-AI-Evaluation-Framework-342fe49f56898039abb7db9bac363b42" target="_blank" rel="noopener noreferrer">Read More ↗</a>
 </div>
 </div>
-<!-- Project 08 -->
 <div class="group list-item-card flex flex-col py-6 border-b border-white/10 hover:bg-[#1a1a1a] transition-colors cursor-crosshair interactive px-4 space-y-3 animate-on-scroll stagger-2 is-visible" style="transition-delay: 200ms;">
 <div class="flex items-center gap-4">
 <span class="project-number font-label-caps text-label-caps text-on-surface-variant inline-block">08</span>
@@ -223,7 +213,6 @@
 <a class="text-white font-label-caps text-label-caps uppercase tracking-widest hover:underline whitespace-nowrap" href="https://www.notion.so/Market-Opportunity-Brief-AI-Voice-Companions-for-Language-Fluency-367fe49f568980c3b34de5f9203cd41d" target="_blank" rel="noopener noreferrer">Read More ↗</a>
 </div>
 </div>
-<!-- Project 09 -->
 <div class="group list-item-card flex flex-col py-6 border-b border-white/10 hover:bg-[#1a1a1a] transition-colors cursor-crosshair interactive px-4 space-y-3 animate-on-scroll stagger-3 is-visible" style="transition-delay: 300ms;">
 <div class="flex items-center gap-4">
 <span class="project-number font-label-caps text-label-caps text-on-surface-variant inline-block">09</span>
@@ -279,12 +268,8 @@
 </div>
 </div>
 <div class="lg:col-span-7 flex flex-col justify-center animate-on-scroll stagger-2 is-visible" style="transition-delay: 200ms;">
-<p class="font-body-lg text-body-lg text-primary mb-8 leading-relaxed">
-I am a product builder focused on translating complex technical capabilities into intuitive user experiences. My background in Mechatronics Engineering gives me a rigorous analytical foundation, while my hands-on startup experience has taught me how to move fast, iterate, and prioritize mercilessly.
-</p>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 leading-relaxed">
-I thrive in 0-to-1 environments where ambiguity is high and the need for structured execution is critical. I'm currently seeking PM roles where I can build 0-to-1 and move fast.
-</p>
+<p class="font-body-lg text-body-lg text-primary mb-8 leading-relaxed">I am a product builder focused on translating complex technical capabilities into intuitive user experiences. My background in Mechatronics Engineering gives me a rigorous analytical foundation, while my hands-on startup experience has taught me how to move fast, iterate, and prioritize mercilessly.</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 leading-relaxed">I thrive in 0-to-1 environments where ambiguity is high and the need for structured execution is critical. I'm currently seeking PM roles where I can build 0-to-1 and move fast.</p>
 <h4 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-6 border-b border-outline-variant pb-2 inline-block">Core Competencies</h4>
 <div class="flex flex-wrap gap-3">
 <span class="bg-[#1a1a1a] text-primary font-label-caps text-label-caps px-4 py-2 uppercase border border-[#333]">Product Roadmap</span>
