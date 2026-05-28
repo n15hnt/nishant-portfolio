@@ -416,8 +416,8 @@ I thrive in 0-to-1 environments where ambiguity is high and the need for structu
         document.querySelectorAll('.animate-on-scroll').forEach((element) => { observer.observe(element); });
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) { navbar.classList.add('scrolled', 'border-b', 'border-outline-variant'); }
-            else { navbar.classList.remove('scrolled', 'border-b', 'border-outline-variant'); }
+            if (window.scrollY > 100) { navbar.classList.add('scrolled'); }
+            else { navbar.classList.remove('scrolled'); }
         });
     </script>
 </body></html>
